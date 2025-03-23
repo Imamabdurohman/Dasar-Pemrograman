@@ -2,8 +2,8 @@ def main():
     x = input("Masukkan nilai x: ")
     y = input("Masukkan nilai y: ")
 
-    bool_x = bool(x.strip()) if x else False
-    bool_y = bool(y.strip()) if y else False
+    bool_x = bool(int(x) == 1) if x else False
+    bool_y = bool(int(y) == 1) if y else False
     
     print(f"\nNilai boolean dari x: {bool_x}")
     print(f"Nilai boolean dari y: {bool_y}")
