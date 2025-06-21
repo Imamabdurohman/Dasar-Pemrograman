@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Polling</title>
+</head>
+<body>
+    <h1>Hasil Polling</h1>
+    <ul>
+        {% for language, votes in results.items %}
+            <li>{{ language }}: {{ votes }} suara</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
