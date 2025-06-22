@@ -1,0 +1,30 @@
+{% extends 'jadwal/base.html' %}
+
+{% block title %}Booking Kelas{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Form Booking Kelas</h1>
+
+{% if error_message %}
+    <div class="alert alert-danger" role="alert">
+        {{ error_message }}
+    </div>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="form-group">
+            {{ field.label_tag }}
+            {{ field }}
+            {% if field.help_text %}
+                <small class="form-text text-muted">{{ field.help_text }}</small>
+            {% endif %}
+            {% for error in field.errors %}
+                <div class="invalid-feedback d-block">{{ error }}</div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Submit Booking</button>
+</form>
+{% endblock %}

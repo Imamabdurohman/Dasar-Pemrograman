@@ -1,0 +1,42 @@
+{% extends 'jadwal/base.html' %}
+
+{% block title %}Lihat Jadwal{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Daftar Jadwal dan Data Dosen</h1>
+
+<div class="table-container">
+    <h2>Mapping Mata Kuliah</h2>
+    {{ mapping_matakuliah|safe }}
+</div>
+
+<div class="table-container">
+    <h2>Jadwal Perkuliahan Angkatan 2024</h2>
+    {{ jadwal_angkatan_24|safe }}
+</div>
+
+<div class="table-container">
+    <h2>Jadwal Perkuliahan Angkatan 2023</h2>
+    {{ jadwal_angkatan_23|safe }}
+</div>
+
+<div class="table-container">
+    <h2>Jadwal Perkuliahan Angkatan 2022</h2>
+    {{ jadwal_angkatan_22|safe }}
+</div>
+
+<div class="table-container">
+    <h2>Data Pembimbing Akademik</h2>
+    {{ pembimbing_akademik|safe }}
+</div>
+
+<div class="table-container">
+    <h2>Daftar Booking Kelas</h2>
+    {% if bookingan_kelas %}
+        {{ bookingan_kelas|safe }}
+    {% else %}
+        <p>Belum ada booking kelas.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

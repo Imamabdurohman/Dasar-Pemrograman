@@ -1,0 +1,12 @@
+{% extends 'jadwal/base.html' %}
+
+{% block title %}Booking Berhasil{% endblock %}
+
+{% block content %}
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Booking Berhasil!</h4>
+    <p>Kelas Anda telah berhasil dibooking. Silakan cek di halaman jadwal.</p>
+    <hr>
+    <p class="mb-0">Anda bisa kembali ke <a href="{% url 'index' %}">Halaman Utama</a> atau <a href="{% url 'booking_kelas' %}">Booking Kelas Lagi</a>.</p>
+</div>
+{% endblock %}

@@ -4,4 +4,4 @@ def alamat_view(request):
     return HttpResponse("Alamat: Jl. KH. Mama Oyon No. 11, Cicantayan Sukabumi")
 
 def telepon_view(request):
-    return HttpResponse("Telepon: +62 838-0604-5240")
+    return HttpResponse("Telepon: +62 838-0604-5240")  
